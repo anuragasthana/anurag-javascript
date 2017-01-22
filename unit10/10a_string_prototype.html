@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>My String Prototype</title>
+    </head>
+    <body>
+        <form>
+            <input type="submit" value="Submit" onclick="show_alphabet()">
+        </form>
+        <script type="text/JavaScript">
+            function show_alphabet(){
+            var str= new String("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+			
+			/*code for extending String object with method that splits the alphabets */
+			function outputSplitAlphabet() {
+				return (this.split(""));
+			}		
+			
+			//Attach custom method to string object
+            String.prototype.sendArray=outputSplitAlphabet;
+			
+			//call custom method
+			var arr = str.sendArray();
+			
+			//Print alphabets
+			for(var count= 0; count<arr.length; count++){
+				document.write(arr[count]+":<br/>");
+			}
+			window.confirm("Output Ok!!");
+
+            };
+        </script>
+    </body>
+</html>

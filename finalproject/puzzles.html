@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Name:Anurag Asthana --><!-- StudentId: 993396  --><title>Anurag's Puzzles</title>
+        <link rel="stylesheet" type="text/css" media="all" href="myhorizonnav.css" />
+    </head>
+    <body bgcolor="#00FFCC">
+        <a id="top"></a>
+        <div id="wrapper">
+            <div id="header">
+                <img src="pictures/headers/puzzles.gif" alt="Header graphic" width="377" height="41" />
+            </div><!-- Horizontal navigation bar -->
+            <div id="navigation">
+                <ul class="nav">
+                    <li>
+                        <a href="newIndex.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="hobbies.html">Hobbies</a>
+                    </li>
+                    <li>
+                        <a href="prefamily.html">Family</a>
+                    </li>
+                    <li>
+                        <a href="awards.html">Awards</a>
+                    </li>
+                    <li>
+                        <a href="trips.html">Trips</a>
+                    </li>
+                    <li>
+                        <a href="puzzles.html">Puzzles</a>
+                    </li>
+                </ul>
+            </div>
+            <BR>
+            <div id="content-wrapper">
+                <font color="black">
+                    <!-- navigate to bottom --><a href="#bottom">Go to bottom</a>
+                </font>
+                <table align="center" border="1" cellpadding="10" cellspacing="10" bgcolor="#00FFCC" width="100%" height="90%">
+                    <!-- 3 rows and 2 coloumns  for 6 pictures -->
+                    <div id="content-inner">
+                        <TR>
+                            <TD align="center">
+                                <p align ="center">
+                                    What are the next numbers in this pattern?
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <b>1734516885.....</b>
+                                </p>
+                            </TD>
+                            <TD align="center">
+                                <p align ="center">
+                                    You are trapped in a house. There are two ways out. There is a dragon guarding
+                                    the first exit , and if you go out the second exit, the Sun's rays will melt you.
+                                    How do you get out?
+                                </p>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD align="center">
+                                <img src="pictures/puzzles/squares.jpg">
+                                <p align ="center">
+                                    How many squares do you see? 
+                                </p>
+                            </TD>
+                            <TD align="center">
+                                <p align ="center">
+                                    What has three hands but can only point?
+                                </p>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD align="center">
+                                <p align ="center">
+                                    There are three types of socks in a box. At most, how many socks do you 
+                                    need to randomly pull out of the box to make one pair?
+                                </p>
+                            </TD>
+                            <TD align="center">
+                                <p align ="center">
+                                    <b>race car</b>
+                                    <br>
+                                    What is a special attribute of these words?
+                                </p>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD align="center">
+                                <p align ="center">
+                                    James mother has four children. The first one's name is January,
+                                    the second one is February. The third one is March. 
+                                    Who is the fourth child? 
+                                </p>
+                            </TD>
+                            <TD align="center">
+                                <p align ="center">
+                                    What word in English is always spelled incorrectly?
+                                </p>
+                            </TD>
+                        </TR>
+                        <tr>
+                            <td colspan="10">
+                                To find out the answers, click <a href="answers.html">here</a>
+                                <br/>
+                                <button type="button" onclick="window.print()">
+                                    Click here to print the page
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10">
+                                To find out what the text below says, move your cursor over it.
+                                <br>
+                                <font size="1" color="white" onmouseover="window.alert('This is a readable piece of text!');">
+                                    This is a readable piece of text!
+                                </font>
+                            </td>
+                        </tr>
+						<tr>
+							<td colspan="10">
+							<script type="text/JavaScript"src="javascript/mydocument.js">
+									
+                            </script> 
+							</td>
+                        </tr>
+						<tr>
+                            <td colspan="10">
+                                <form>
+								To find the area of any circle enter the radius in this box and click submit.<br>
+								<input type="text" id="rad" /><br>
+								<input type="submit" id="area"/><br>
+								</form>
+								<script type="text/javascript">
+								var area_submit = document.getElementById("area");
+								area_submit.onclick= function(){
+									var radius = document.getElementById("rad").value;
+									
+									if(radius.length<1){
+									window.alert("Please enter a radius");
+									return false;
+									}
+									else{
+										if(radius != (radius*1)) {
+										window.alert("The radius must be numeric!");
+										return false;
+										}
+										else{
+										var thearea = Math.PI * (radius * radius);
+										window.alert("The area is "+thearea+" square units");
+										return false;
+										}
+									}
+								}
+								</script>
+                            </td>
+                        </tr>
+						<tr>
+                            <td colspan="10">
+                                <form>
+								To find a prime number enter a positive number in this box and click submit.<br>
+								<input type="text" id="pnumber" /><br>
+								<input type="submit" id="prime"/><br>
+								</form>
+								<script type="text/javascript">
+								var prime_submit = document.getElementById("prime");
+								prime_submit.onclick= function(){
+									var userNumber = document.getElementById("pnumber").value;
+									
+									if(userNumber.length<1){
+									window.alert("Please enter a valid positive number");
+									return false;
+									}
+									else{
+										if(userNumber != (userNumber*1)) {
+										window.alert("The entry must be numeric!");
+										return false;
+										}
+										else{
+										var halfNum = Math.floor(userNumber/2);
+										var i = 2;
+										var result;
+										while ( i < halfNum) {
+										   result =userNumber%i;
+                                           if (result == 0) {
+											window.alert("Number : " +userNumber+ " is not prime");
+											break;
+                                           } else {
+                                            i++;										   
+										   }
+										}
+										if ( i >= halfNum) {
+											window.alert("Number : " +userNumber + " is prime");
+										}
+										return false;
+										}
+									}
+								}
+								</script>
+                            </td>
+                        </tr>
+						
+						<tr>
+                            <td colspan="10">
+								<form>
+									Find product of 3 numbers<br>Enter numbers in each of the three text boxes<br>
+									<input type="text" id="num1" /><br>
+									<input type="text" id="num2" /><br>
+									<input type="text" id="num3" /><br>
+									<input type="submit" id="multi"/><br>									
+								</form>	
+								<script type="text/JavaScript" src="javascript/myvalidator.js">
+									</script>
+                            </td>
+                        </tr>
+						<tr>
+                            <td colspan="10">
+                                <form>
+								<input type="button" value="Back" onclick="goBack()">
+								</form>
+								<script type="text/javascript">
+								function goBack()
+								{
+									window.history.back()
+								}
+								</script>
+                            </td>
+                        </tr>
+						
+                        <tr>
+                            <td colspan="10">
+                                <div id="12time">
+                                </div>
+                            </td>
+                        </tr>
+                        </table>
+                        <a id="bottom"></a>
+                        <font color="black">
+                            <!-- navigate to top --><a href="#top">Back to top</a>
+                        </font>
+                    </div>
+                    </div>
+                </div>
+                <script type="text/JavaScript" src="javascript/myclock.js">
+				//calls the clock in a javascript file				
+                </script>
+                </body>
+            </html>

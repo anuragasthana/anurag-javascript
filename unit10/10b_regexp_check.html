@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Checking with RegExp</title>
+    </head>
+    <body>
+        <form name="submitnumber">
+            <input type="text" size="15" name="inputnumber" id="input">
+			<input type="submit" value="Check" onclick="checknumber()">
+        </form>
+        <script type="text/JavaScript">
+            function checknumber(){ 
+            var tendigitnum = /^\d{10}$/; 
+            var inputString = document.getElementById("input").value; 
+            if ( inputString.length < 1 ) {
+				window.alert("Please enter something!!");
+            }	else {
+            if (inputString.search(tendigitnum) == -1) {
+				window.alert("Please enter a valid 10 digit number!");               
+            } else { 
+				document.write("You Entered: " + inputString);
+				window.alert("Thank you!!");
+            } 
+            }
+            };
+        </script>
+    </body>
+</html>

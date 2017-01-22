@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>My String Object Project</title>
+    </head>
+    <body>
+        <script type="text/JavaScript">
+		     
+			/* The purpose of this script is to make use of some of the String Object methods.
+			   I have shown 9 different use cases as listed below. The input String is provided
+			   by the user. The following methods are shown.
+			   1. fontsize() 2.fontcolor() 3.toUpperCase() 4.toLowerCase() 5. link()
+			   6. string prototype method, custom method reverses the user string
+			   7. concat() - concatinate user string and another string provided in the script.
+			   8. split() - Separate words in User String,using spaces to separate words.
+			   9. match() - Find numbers in user input string 
+			*/
+
+            /* get user input string */
+            function input(){
+            var user= window.prompt("Pleae enter an input String....");
+			if (user.length < 1) {
+				window.alert("Please enter something"); 
+			  input();
+			 }
+			/*code for extending String object with method that reverses the string */ 
+		    function writebackwards(){
+		    for (var count=this.length-1; count>=0;count--) {
+					document.write(this.charAt(count))
+			 }
+			}
+
+			//Attach custom method to string object
+			String.prototype.writeback=writebackwards;
+			
+	
+			document.write("<br>" + "YOU ENTERED:  " + user + "<br>" + "<br>");
+			document.write("1: Write user input in big font." + "<br>");
+            document.write(user.fontsize(7)+"<br>" + "<br>");
+			document.write("2: Write user input in blue font." + "<br>");
+            document.write(user.fontcolor("blue")+"<br>" + "<br>");
+			document.write("3: Write user input in Upper case" + "<br>");
+            document.write(user.toUpperCase()+"<br>" + "<br>");
+			document.write("4: Write user input in Lower case" + "<br>");
+            document.write(user.toLowerCase() + "<br>" + "<br>");
+			document.write("5: Create user input text link" + "<br>");
+            document.write(user.link("http://www.miniclip.com")+"<br>" + "<br>");
+			document.write("6: Write user input backward" + "<br>");
+            user.writeback();
+			document.write("<br>"+"<br>");
+			document.write("7: Concatinate user input string and myString " + "<br>");
+			
+			var myString = " Have a wonderful day!!";
+			var concatString = user.concat(myString);
+			document.write(concatString+ "<br>" + "<br>");
+			document.write("8: Seperate words in User String,using spaces to seperate words " + "<br>");
+			var arr = user.split(" ");
+			for ( i = 0 ; i < arr.length; i++ ) {
+			   document.write(arr[i] + "<br>");
+			}   
+			document.write("<br>"+"<br>");
+			document.write("9: Find numbers in user input string " + "<br>");
+			var r = /\d+/g;
+			var digits = user.match(r);
+			for ( i = 0 ; i < digits.length; i++ ) {
+			   document.write(digits[i] + ", ");
+			}  
+			document.write("<br>"+"<br>");			
+			}
+
+            input();
+        </script>
+    </body>
+</html>
